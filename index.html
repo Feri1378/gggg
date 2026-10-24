@@ -353,7 +353,7 @@ async function checkout() {
     }
     if (j.error === 'stock') toast('موجودی «' + j.name + '» کافی نیست');
     else if (j.error === 'auth') toast('خطای احراز هویت؛ دوباره از ربات وارد شو');
-    else toast('DEBUG err=' + j.error);
+    else toast('DEBUG err=' + j.error + ' ' + (j.detail || ''));
   } catch (e) {
     toast('DEBUG net=' + e.message);
   }
